@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading pos-rel">
+        <button type="button" title="BOWL" class="btn-bowl btn btn-danger btn-lg btn-fab" ng-click="bowlingstart()"><i class="i-ball"></i></button>
+        <h3 class="gap-m0 text-white">
+            <span class="text-uppercase">{{Batting}}</span> - 0
+            <small class="d-block text-white">
+                <span data-lang="VS">VS</span>
+                <span class="text-uppercase">{{Bowling}}</span>
+            </small>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <div class="score-overs">
+            <div class="strike"><span>Over 1 (0 Ball)</span></div>
+            <ul class="list-unstyled score-list">
+                <li><div class="lead text-center" data-lang="MSG_TOTAL_OVER">Six over match between {{FirstTeam}} Vs. {{SecondTeam}}</div></li>
+            </ul>
+        </div>
+        <div>
+            <div class="text-uppercase strike"><span data-lang="PLAY_STARTED">PLAY_STARTED</span></div>
+        </div>
+        <button class="gap-top-m30 btn btn-block" disabled>Load More</button>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading pos-rel">
+        <button type="button" class="gap-top-m5 btn btn-primary btn-lg pull-right" ng-click="goto()">Back to the Game</button>
+        <h3 class="gap-m0 text-white">
+            <span class="text-uppercase">{{Batting}}</span> - {{0||totalrun}}
+            <small class="d-block text-white">
+                <span data-lang="VS">VS</span>
+                <span class="text-uppercase">{{Bowling}}</span>
+            </small>
+        </h3>
+    </div>
+    <div class="panel-body">
+        -        <div class="score-overs" ng-repeat="(key, value) in listview |groupBy: 'Overs'|reverse">
+            <div class="strike"><span> Before {{key}} Over(6 Balls)</span></div>
+            <ul class="list-unstyled score-list" ng-repeat="item in value|orderBy: ['-Id']">
+                <li class="active">
+
+                    <a href="#review/{{GID}}/{{item.Overs}}/{{item.Ball}}" class="clearfix"><span class="score-b">{{item.Overs}}.{{item.Ball}}</span><span class="score-c">{{item.Comments}}</span><span class="score-r">{{item.Score}}</span></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--- <div class="score-overs" data-ng-repeat="(key,Over) in groups |reverse| r ">
+             <div class="strike"><span>Before {{key}} Over (6 Balls)</span></div>
+             <ul class="list-unstyled score-list" ng-repeat="item in Over|orderBy: ['Id','Overs']|reverse">
+                 <li class="active">
+
+                     <a href="#/{{GID}}/{{item.Overs}}/{{item.Ball}}" class="clearfix"><span class="score-b">{{item.Overs}}.{{item.Ball}}</span><span class="score-c">{{item.Comments}}</span><span class="score-r">{{item.Score}}</span></a>
+                 </li>
+
+             </ul>
+         </div>--->
+
+        <div class="score-overs">
+
+        </div>
+        <!----<div class="score-overs hide" id="hideScore">
+            <div class="strike"><span>Over 3 (6 Balls)</span></div>
+            <ul class="list-unstyled score-list">
+                <li>
+                    <a href="review.html#/4728/3/6" class="clearfix"><span class="score-b">2.6</span><span class="score-c">No run was taken</span><span class="score-r">0 Run</span></a>
+                </li>
+                <li>
+                    <a href="review.html#/4728/3/5" class="clearfix"><span class="score-b">2.5</span><span class="score-c">4 runs through the off side</span><span class="score-r">4 Runs</span></a>
+                </li>
+                <li>
+                    <a href="review.html#/4728/3/4" class="clearfix"><span class="score-b">2.4</span><span class="score-c">4 runs through the off side</span><span class="score-r">4 Runs</span></a>
+                </li>
+                <li>
+                    <a href="review.html#/4728/3/3" class="clearfix"><span class="score-b">2.3</span><span class="score-c">1 run was taken</span><span class="score-r">1 Run</span></a>
+                </li>
+                <li>
+                    <a href="review.html#/4728/3/2" class="clearfix"><span class="score-b">2.2</span><span class="score-c">6 runs through the leg side</span><span class="score-r">6 Runs</span></a>
+                </li>
+                <li>
+                    <a href="review.html#/4728/3/1" class="clearfix"><span class="score-b">2.1</span><span class="score-c">2 runs was taken</span><span class="score-r">2 Runs</span></a>
+                </li>
+            </ul>
+        </div>
+        <button class="gap-top-m30 btn btn-block" onclick="loadMore()">Load More</button>-->
+    </div>
+
+</div>

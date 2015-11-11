@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>CRICCARD</title>
+    <meta name="description" content="SELISE CRICCARD">
+    <meta name="viewport" content="width=device-width">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default gap-top-m30">
+                        <div class="panel-heading text-center">
+                            <h2 class="gap-m0">CRICCARD</h2>
+                        </div>
+
+                        <div ng-view>
+
+
+                        </div>
+
+                        <input type="text" ng-model="v">
+                        {{v}}
+
+                        <div class="panel-footer clearfix">
+                            <div class="btn-group pull-right" id="langChange">
+                                <button onclick="changeLang('en', this)" class="btn btn-default active" data-lang="ENGLISH">ENGLISH</button>
+                                <button onclick="changeLang('de', this)" class="btn btn-default" data-lang="GERMAN">GERMAN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Only for example interaction purpose -->
+
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+
+    <script src="app/scripts/Service/angular-filter.js"></script>
+        <script src="app/scripts/Service/underscore.js"></script>
+        <script src="app/scripts/Service/JavaScript1.js"></script>
+    <script src="app/app.js"></script>
+        <script src="app/scripts/Controller/MatchParticipantController.js"></script>
+        <script src="app/scripts/Controller/MatchParticipantStartController.js"></script>
+    <script src="app/scripts/Controller/MatchPlayingController.js"></script>
+        <script src="app/scripts/Controller/MatchReviewController.js"></script>
+        <script src="app/scripts/Service/MatchParticipantService.js"></script>
+        <!--
+            **** Important: ****
+            !!!! delete all "data-lang" attributes !!!!
+            ********************
+            -->
+    </body>
+</html>

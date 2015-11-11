@@ -1,0 +1,46 @@
+					<div class="panel-body">
+						<h4 class="text-center" data-lang="CREATE_MATCH">CREATE MATCH</h4>
+                        <form name="userForm">
+                            <div class="form-group row">
+                                <div class="col-xs-10 col-lg-11">
+                                    <label class="control-label sr-only" for="Team1Name" data-lang="TEAM_1_NAME">Team 1 Name</label>
+                                    <input class="form-control input-lg" id="Team1Name" type="text" name="FirstTeam" ng-model="FirstTeam" required placeholder="Team 1 Name" data-lang="TEAM_1_NAME" ng-minlength="4">
+                                    <span style="color:red;"class="text-error" ng-show="userForm.FirstTeam.$error.minlength">Your FirstTeam must be upto 4 digit</span>
+                                    <span style="color:red;" class="text-error" ng-show="userForm.FirstTeam.$error.required">Required Name</span>
+
+                                </div>
+                                <div class="col-xs-2 col-lg-1 text-center">
+                                    <label class="radio ball">
+                                        <input type="radio" name="Bowling" ng-model="Bowling" ng-value="FirstTeam" required />
+                                        <i title="Bowl First"></i>
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+
+                            <h4 class="text-muted text-center" data-lang="VS">VS</h4>
+
+
+
+
+                            <div class="form-group row">
+                                <div class="col-xs-10 col-lg-11">
+                                    <label class="control-label sr-only" for="Team2Name" data-lang="TEAM_2_NAME">Team 2 Name</label>
+                                    <input class="form-control input-lg" id="Team2Name" type="text" name="SecondTeam" ng-model="SecondTeam" required placeholder="Team 2 Name" data-lang="TEAM_2_NAME" ng-minlength="4">
+                                    <span style="color:red;" class="text-error" ng-show="userForm.SecondTeam.$error.minlength">Your FirstTeam must be upto 4 digit</span>
+                                    <span style="color:red;" class="text-error" ng-show="userForm.SecondTeam.$error.required">Required Name</span>
+
+                                </div>
+                                <div class="col-xs-2 col-lg-1">
+                                    <label class="radio ball">
+                                        <input type="radio" name="Bowling" ng-model="Bowling" ng-value="SecondTeam" required />
+
+                                        <i title="Bowl First"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="userForm.$invalid || userForm.$pristine||userForm.Bowling.$error.required" data-lang="PLAY_NOW" ng-click="save()">PLAY NOW</button>
+                        </form>
+					</div>

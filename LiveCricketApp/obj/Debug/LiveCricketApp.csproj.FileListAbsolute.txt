@@ -1,0 +1,6 @@
+D:\ExamSelise\LiveCricketApp\bin\LiveCricketApp.dll.config
+D:\ExamSelise\LiveCricketApp\bin\LiveCricketApp.dll
+D:\ExamSelise\LiveCricketApp\bin\LiveCricketApp.pdb
+D:\ExamSelise\LiveCricketApp\obj\Debug\LiveCricketApp.csprojResolveAssemblyReference.cache
+D:\ExamSelise\LiveCricketApp\obj\Debug\LiveCricketApp.dll
+D:\ExamSelise\LiveCricketApp\obj\Debug\LiveCricketApp.pdb
